@@ -11,4 +11,4 @@ cat /home/db/lesson10/access.log >> /home/db/lesson10/access.backup
 rm -f /home/db/lesson10/access.log
 cat /var/log/apache2/error.log >> /var/log/apache2/error.backup
 rm -f /var/log/apache2/error.log
-sendemail -f "kentastish@gmail.com" -t "leokil9321@gmail.com" -u "Отчет" -s "smtp.gmail.com:587" -o tls=yes -xu "kentastish@gmail.com" -xp "yxphwotbdmlgaasa" -m "AcessLog Time:" "$ABE-$AEN"  "\nErrorLog Time: $EBE-$EEN" "\nIP\n" "$IP" "\nURL\n" "$URL" "\nCODE\n" "$CODE" "\nERROR\n" "$ERR"
+sendemail -f "EmailFrom" -t "EmailTo" -u "Отчет" -s "smtp.gmail.com:587" -o tls=yes -xu "username" -xp "password" -m "AcessLog Time:" "$ABE-$AEN"  "\nErrorLog Time: $EBE-$EEN" "\nIP\n" "$IP" "\nURL\n" "$URL" "\nCODE\n" "$CODE" "\nERROR\n" "$ERR"
